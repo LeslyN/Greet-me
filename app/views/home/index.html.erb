@@ -1,0 +1,36 @@
+ <section class="hero is-fullheight is-default is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <div class="column">
+            <div class="card">
+              <header class="card-header has-text-centered">
+                <h1 class="card-header-title">
+                  Ingresa tu nombre aquí
+                </h1>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <form action="/saludar" method="GET">
+                    <div class="field is-grouped is-grouped-centered">
+                        <input type="text" class="input" name="name" placeholder="nombre">
+                    </div>
+                    <div class="field is-grouped is-grouped-centered">
+                      <p class="control">
+                        <input type=submit class="button is-primary is-outlined " value="Salúdame">
+                      </p>
+                    </div>
+                  </form>
+                  <% if @greet %>
+                    <div class="has-text-centered is-bold">
+                        <h2>Hola <%= @greet %></h2>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
